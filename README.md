@@ -6,6 +6,8 @@ https://raw.githubusercontent.com/R347H4CK3R/BOZ-Strata-Source/main/strata-sourc
 
 Experimental unsigned compatibility build 135.8. Launch and gameplay remain unverified. Game belongs to Activision. This repository contains installation metadata, the icon, and the packaged compatibility build only. Diagnostic reports and build inputs are kept in a separate private repository.
 
-## Small Free Shop add-on
+## Small Free Shop add-on — v2
 
-Keep Loader Fix v5 installed. The optional [BOZFreeShop.dylib](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/free-shop-v1/BOZFreeShop.dylib) is a small, unsigned per-game Strata tweak; it does not require a full-game reinstall. Follow [INSTALL.md](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/free-shop-v1/INSTALL.md) to import it into a tweak folder and assign that folder to BOZ. It adds a Free Shop button for local credit grants through the game's original credit/save routine. Native compilation and ARM64 routine tests passed. Phone UI, persistence after restart, and spending still require testing.
+[Download BOZFreeShop.dylib v2](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/free-shop-v2/BOZFreeShop.dylib) and follow [INSTALL.md](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/free-shop-v2/INSTALL.md). Close the game completely and replace the old dylib in its assigned Strata tweak folder. Keep only one enabled copy. No full-game reinstall is needed.
+
+v1 is withdrawn because the native game add/save path could freeze. v2 avoids that call and uses a separate local wallet in Documents/BOZFreeShop/wallet.plist, saved asynchronously. Keep the add-on enabled to restore this wallet on launch. Shop status is included in the existing session diagnostic report. Native compilation and wallet filesystem tests passed; phone UI, spending, freeze and restart-persistence checks remain physical-device tests.

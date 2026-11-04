@@ -12,10 +12,14 @@ Experimental unsigned compatibility build 135.8. Launch and gameplay remain unve
 
 v1 is withdrawn because the native game add/save path could freeze. v2 avoids that call and uses a separate local wallet in Documents/BOZFreeShop/wallet.plist, saved asynchronously. Keep the add-on enabled to restore this wallet on launch. Shop status is included in the existing session diagnostic report. Native compilation and wallet filesystem tests passed; phone UI, spending, freeze and restart-persistence checks remain physical-device tests.
 
-## Small Touch Controls add-on — v1
+## Combat HUD add-on — v3
 
-[Download BOZControls.dylib](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/controls-v1/BOZControls.dylib) (93,584 bytes) and read [INSTALL.md](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/controls-v1/INSTALL.md). Close the game and import the add-on into the same assigned Strata tweak folder as Free Shop v2. Keep both dylibs. At the main menu, choose Controls > Enable touch preset, then start a new round. No full-game reinstall is needed.
+[Download BOZControls.dylib v3](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/controls-v3/BOZControls.dylib) (112,408 bytes) and read [INSTALL.md](https://github.com/R347H4CK3R/BOZ-Strata-Source/releases/download/controls-v3/INSTALL.md). Close the game, remove the previous BOZControls.dylib and import this replacement into the same assigned Strata tweak folder as Free Shop v2. Keep BOZFreeShop.dylib and only one BOZControls.dylib. Enable Controls > Enable COD-style HUD if needed; start a new round for native Touch mode. No full-game reinstall.
 
-Adds movable manual FIRE, hold ADS, RELOAD, native swipe aiming and sensitivity presets inspired by Dead Trigger 2. No target-based auto-fire is added. Existing combat, AI and manual gestures remain native. Move buttons through the Controls menu; leave an uncovered region for swipe aim. Hiding combat buttons stops add-on commands but retains the native Touch mode and sensitivity; restore those in the game's original options if desired.
+COD Mobile-inspired transparent, movable combat controls: FIRE, ADS, RELOAD, SWAP, MELEE, GRENADE, CROUCH, TACTICAL and a centered BUY / USE target. Matched native combat buttons are hidden, disabled and moved offscreen while replacement mode is enabled. Native movement/swipe aiming, menus, health, ammo and score remain. No target-based auto-fire.
 
-ARM64 unsigned build checks, native input-handler emulation, pause-state vector checks and code review passed. Physical-device multitouch, pause transitions and control feel still require testing. Status is included in the existing diagnostic session report.
+BUY / USE appears when the native game permits an interaction. Native price/interaction text moves below it. It invokes the normal game action; prices, perk requirements and proximity checks remain. Its background is transparent so the scene remains visible.
+
+Controls > Restore native buttons stops add-on input and restores recorded native widgets and prompt positions, including retained control schemes. Native Touch mode/sensitivity can be restored separately through the original game options. Replacement status and events use the existing diagnostic reporter.
+
+ARM64 unsigned build, real native input/POI/position/hit-test checks and code review passed. Physical-device rendering, touch behavior, pause/round transitions and restoration remain experimental and require iPhone testing.

@@ -32,10 +32,20 @@
       "bundleIdentifier": "app.jarvisevo.ios",
       "developerName": "R347H4CK3R",
       "subtitle": "Unsigned iOS 26+ development build",
-      "localizedDescription": "Unfinished Orivyn 0.1.1 build 10 for iOS 26+. Includes the verified reviewed native read workflow, local LFM vision and history-import presentation fix. General autonomy remains unreliable; vision still fails a counting case. Automatic live sync is disabled. Models download separately; the installer must sign this unsigned IPA. Simulator checks passed for the unchanged application source; physical-device behavior remains unverified. Not completed 1.0.0.",
+      "localizedDescription": "Unfinished Orivyn 0.1.1 build 11 for iOS 26+. Adds separate confirmation before replacing history; preserve-local remains the default. Host component tests and iOS compilation passed, but actual selected-file UI, external file-provider grants and physical-device behavior remain unverified. General autonomy and broad vision remain unreliable; automatic live sync is disabled. Models download separately. This unsigned preview requires compatible signing. Not completed 1.0.0.",
       "iconURL": "https://raw.githubusercontent.com/R347H4CK3R/Orivyn-Distribution/main/icon.png",
       "tintColor": "7558FF",
       "versions": [
+        {
+          "version": "0.1.1",
+          "buildVersion": "11",
+          "date": "2026-11-15T14:39:01Z",
+          "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build11/Orivyn-0.1.1-build11-unsigned.ipa",
+          "size": 37156968,
+          "minOSVersion": "26.0",
+          "localizedDescription": "Orivyn 0.1.1 build 11 — unfinished unsigned iOS 26+ preview.\n\nAdds a separate confirmation before replacing conversation history from a backup. Preserve-local remains the default. Canceling a pending replacement leaves stored history unchanged; stale picker callbacks after navigation are rejected, and a confirmed replacement is consumed once. Existing native tools, vision and transcript features are retained.\n\nVerification of integrated source 5c5ca7fbfe812386fb6afb8bc20778c374e0f525: 152 macOS host XCTest cases passed with no failures or skips, including synthetic local-file fixtures exercising the production confirmation state → coordinated file reader → SQLite chain (not AppModel or Files UI) for replacement, cancellation/preservation and corrupt input. iOS build-for-testing passed, which compiles but does not execute the iOS tests. Portable Foundation and source-contract checks passed separately. A prior controlled simulator comparison verified Files presentation and cancel/navigation only, not selected-file replacement. Actual selected-file confirmation UI, external file-provider access grants and physical-iPhone behavior remain unverified.\n\nPackage source 3f96a41b363e3b663f69497fef4bd698fb1fa514 changes only the build number and packaging tooling from that tested integration. The prior build 10 simulator/native-route evidence belongs to its older source and was not rerun for this preview; it is not full verification of build 11.\n\nKnown limits: generic autonomous requests can still respond before completing requested reads. Vision remains experimental, with a known mixed-shape counting failure in the earlier frozen evaluation. Automatic live sync remains disabled. Models download separately; no weights are bundled. Optional remote providers may charge. Process termination can leave a temporary model snapshot using additional storage. Device installation/signing refresh, voice and memory/thermal performance are unverified. This is not completed 1.0.0 and is not an OpenAI product.\n\nIntegrated host and iOS compile evidence: https://github.com/R347H4CK3R/Orivyn/actions/runs/43722288003\nPackage gate: https://github.com/R347H4CK3R/Orivyn/actions/runs/43723555076\n\nThe pinned combined runtime rebuilt successfully, portable package/graph checks passed, and the Release device build and independent unsigned IPA inspection passed.\n\nFile: Orivyn-0.1.1-build11-unsigned.ipa\nSize: 37,156,968 bytes\nSHA-256: 499a0a1a2c335fab62b23a0b33be5ef1407278655de5f65bf43d5c22917ab7e9\n\nSideStore or another compatible installer must sign this unsigned IPA. Preserve existing app data and signing identity when updating. Required third-party notices and model license terms remain bundled.",
+          "buildNumber": "11"
+        },
         {
           "version": "0.1.1",
           "buildVersion": "10",
@@ -77,10 +87,10 @@
         }
       },
       "version": "0.1.1",
-      "buildNumber": "10",
-      "versionDate": "2026-11-15T06:57:07Z",
-      "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build10/Orivyn-0.1.1-build10-unsigned.ipa",
-      "size": 37141596,
+      "buildNumber": "11",
+      "versionDate": "2026-11-15T14:39:01Z",
+      "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build11/Orivyn-0.1.1-build11-unsigned.ipa",
+      "size": 37156968,
       "minOSVersion": "26.0"
     }
   ],

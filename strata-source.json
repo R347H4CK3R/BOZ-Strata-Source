@@ -32,10 +32,20 @@
       "bundleIdentifier": "app.jarvisevo.ios",
       "developerName": "R347H4CK3R",
       "subtitle": "Unsigned iOS 26+ development build",
-      "localizedDescription": "Unfinished Orivyn 0.1.1 build 12 for iOS 26+. Adds conservative recovery of app-owned orphan model snapshots while protecting active leases. Host filesystem/process tests and iOS Release compilation passed; actual iPhone inference, memory-map lifetime, selected-file UI and device behavior remain unverified. Backup replacement confirmation retained; preserve-local remains the default. General autonomy and broad vision remain unreliable; automatic live sync is disabled. Models download separately. Requires compatible signing. Not completed 1.0.0.",
+      "localizedDescription": "Unfinished Orivyn 0.1.1 build 13 for iOS 26+. Preserves unexpected model-recovery staging data rather than recursively deleting it, and blocks recovery for inspection. Retains active model-snapshot leases and backup replacement confirmation. Host filesystem tests and iOS Release compilation passed; actual iPhone inference, selected-file UI and device behavior remain unverified. General autonomy and broad vision remain unreliable; automatic live sync is disabled. Models download separately. Requires compatible signing. Not completed 1.0.0.",
       "iconURL": "https://raw.githubusercontent.com/R347H4CK3R/Orivyn-Distribution/main/icon.png",
       "tintColor": "7558FF",
       "versions": [
+        {
+          "version": "0.1.1",
+          "buildVersion": "13",
+          "date": "2026-11-15T16:17:30Z",
+          "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build13/Orivyn-0.1.1-build13-unsigned.ipa",
+          "size": 37169284,
+          "minOSVersion": "26.0",
+          "localizedDescription": "Orivyn 0.1.1 build 13 — unfinished unsigned iOS 26+ preview.\n\nProtects unexpected data in model-installation recovery staging. Recovery now blocks before changing live model/manifest files if an unfamiliar staging name is present. Cleanup validates all remaining entries before removing known regular files and the empty directory; it no longer recursively deletes arbitrary staging contents. Valid installation/removal rollback and hard-linked recovery copies remain supported. An unexpected temporary filename left by an interrupted atomic write can now require inspection rather than automatic cleanup. This deliberately favors preservation over silently deleting data.\n\nRetains build12's conservative orphan model-snapshot recovery and active leases, and build11's explicit confirmation before replacing conversation history. Preserve-local remains the backup default. Existing native tools, experimental vision and transcript features remain enabled.\n\nVerification: 19 synthetic Darwin filesystem tests of the exact production recovery component passed with zero failures or skips; combined native-runtime compilation, Release iOS device compilation and unsigned IPA structure/resource checks. These do not verify actual iPhone inference, memory-mapped model lifetime, selected-file confirmation UI, external file-provider grants, hostile concurrent writers or sudden power-loss durability. No physical-device acceptance is claimed.\n\nKnown limits: general autonomous requests can still answer before completing requested reads. Vision is experimental with an earlier mixed-shape counting failure. Automatic live sync remains disabled. Models download separately; no weights are bundled. Optional remote providers may charge. Existing unmarked orphan snapshots remain untouched. This is not completed 1.0.0 and is not an OpenAI product.\n\nSideStore or another compatible installer must sign this unsigned IPA. Preserve existing app data and signing identity when updating. Required third-party notices and model license terms remain bundled.\n\nExact package source: 10bb4038d23389fb215c08c34428abe0a3ecb027\nSuccessful gate: https://github.com/R347H4CK3R/Orivyn/actions/runs/43732749341\nFile: Orivyn-0.1.1-build13-unsigned.ipa\nSize: 37169284 bytes\nSHA-256: 90952536433c54f5b2850aeed9da3c01d5738fbf32a9798056f93647152f9cbb\n",
+          "buildNumber": "13"
+        },
         {
           "version": "0.1.1",
           "buildVersion": "12",
@@ -97,10 +107,10 @@
         }
       },
       "version": "0.1.1",
-      "buildNumber": "12",
-      "versionDate": "2026-11-15T15:40:36Z",
-      "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build12/Orivyn-0.1.1-build12-unsigned.ipa",
-      "size": 37168551,
+      "buildNumber": "13",
+      "versionDate": "2026-11-15T16:17:30Z",
+      "downloadURL": "https://github.com/R347H4CK3R/Orivyn/releases/download/orivyn-v0.1.1-build13/Orivyn-0.1.1-build13-unsigned.ipa",
+      "size": 37169284,
       "minOSVersion": "26.0"
     }
   ],
